@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+	  <section class="w-full mx-auto lg:w-[740px] py-44">
+		<img class="rounded-full w-12 h-12 mb-4" src="https://media.licdn.com/dms/image/D4E03AQFtYsUkmeaFgQ/profile-displayphoto-shrink_400_400/0/1692468016904?e=2147483647&v=beta&t=VXA_Msp-anFtBCsJDDl_UCHscq9f4dZH_49k_SXRcpU" alt="radamantium photo"/>
+		<h1 class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4">Hey, I'm Rada <div class="flex justify-center items-center"><a href="https://www.linkedin.com/in/eduardo-arede-658677221/" target="_blank" rel="noopener"><Badge>Open to work</Badge></a></div></h1>
+		<h2 class="text-2xl opacity-80 text-wrap"><span class="text-yellow-200/90 opacity-80">+3 year working in the web developing.</span><span class="text-red-100/90"> From Buenos Aires, Argentina. </span><span class="opacity-80">Web solutions and much more...</span></h2>
+	  </section>
+	</main>
+</Layout>
+

@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/onest"
 import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
 interface Props {
 	title: string;
 	description: string;
@@ -23,6 +24,7 @@ const { description, title } = Astro.props;
 		
 		<Header/>
 		<slot />
+		<Footer/>
 	</body>
 </html>
 <style is:global>

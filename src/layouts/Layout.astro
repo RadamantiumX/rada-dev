@@ -1,6 +1,6 @@
 ---
 import "@fontsource-variable/onest"
-import Header from "../components/Header.astro"
+import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro"
 interface Props {
 	title: string;
@@ -22,7 +22,7 @@ const { description, title } = Astro.props;
 	</head>
 	<body>
 		
-		<Header/>
+		<Navbar/>
 		<slot />
 		<Footer/>
 	</body>
@@ -40,9 +40,12 @@ const { description, title } = Astro.props;
 		color: white;
 		display: flex;
 		flex-direction: column;
-		background: #050505;
 		min-height: 100vh;
+		background-image: linear-gradient(to right,#0d0c0c  10%, rgb(22, 18, 18) 100%);
 		
+	}
+	header {
+		height: 80vh;
 	}
 	
 	/* Si el usuario tiene desactivada las animaciones, no las verá. */

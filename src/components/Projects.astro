@@ -2,17 +2,23 @@
 // Importamos el icono, pero esta vez *NO* como componente
 import Vite from "./icons/Vite.astro"
 import TailwindCSS from "./icons/TailwindCSS.astro"
+import React from "./icons/React.astro"
 
 const TAGS = {
     VITE: {
         name: "Vite",
-        class: "bg-black text-white",
+        class: "bg-white text-black",
         icon: Vite     
     },
     TAILWIND: {
         name: "Tailwind CSS",
-        class: "bg-black text-white",
+        class: "bg-white text-black",
         icon: TailwindCSS
+    },
+    REACT: {
+        name: "React",
+        class: "bg-white text-black",
+        icon: React
     }
 }
 
@@ -23,7 +29,7 @@ const PROJECTS = [
         link: 'https://epikka-new.vercel.app/home',
         github: 'https://github.com/RadamantiumX/epikka-new',
         image: '../../public/projects/epikka-web.webp',
-        tags: [TAGS.VITE, TAGS.TAILWIND]
+        tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT]
     }
 ]
 ---
@@ -33,10 +39,15 @@ const PROJECTS = [
         <article>
            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
            <p class="text-lg mb-4 text-pretty">{description}</p>
-           <ul>
+           <ul class="flex gap-x-2 flex-row mb-2">
              {
                 tags.map(tag => (
-                    <li><tag.icon/></li>
+                    <li>
+                     <span class={`flex gap-x-4 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                       <tag.icon class="size-4"/>
+                       {tag.name} 
+                     </span>     
+                    </li>
                 ))
              }
             </ul>

@@ -1,16 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
-import MailIcon from '../components/icons/Mail.astro';
 import BriefcaseIcon from '../components/icons/Briefcase.astro';
 import CodeIcon from '../components/icons/Code.astro';
-import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
+import Header from '../components/Header.astro';
+import SectionTitle from '../components/SectionTitle.astro';
 ---
 
 <Layout 
@@ -18,45 +14,26 @@ title="Radamantium Portfolio | Solutions & web developer"
 description='Web developing and much more. If you wanna create a modern website, i can help with that, you can see my experience and projects. Enter to comprobe it...🚀'
 >
 	<main class="px-4">
-	  <SectionContainer class="py-44 pb-32">
-		<img class="rounded-full size-12 mb-4" src="https://media.licdn.com/dms/image/D4E03AQFtYsUkmeaFgQ/profile-displayphoto-shrink_400_400/0/1692468016904?e=2147483647&v=beta&t=VXA_Msp-anFtBCsJDDl_UCHscq9f4dZH_49k_SXRcpU" alt="radamantium photo"/>
-		<h1 class="text-white text-3xl md:text-4xl font-bold flex justify-center flex-row gap-x-4 pb-6 lg:pb-10">Hey, I'm Rada <div class="flex justify-center items-center"><a href="https://www.linkedin.com/in/eduardo-arede-658677221/" target="_blank" rel="noopener"><Badge>Open to work</Badge></a></div></h1>
-		<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]"><span class="text-yellow-200/90">+3 year working in the web developing.</span><span class="text-red-200/90"> From Buenos Aires, Argentina. </span><span class="opacity-80">Web solutions and much more...</span></h2>
-
-       <!--Socials-->
-	   <nav class="flex gap-4 mt-8 flex-wrap">
-			<SocialPill href="https://www.linkedin.com/in/eduardo-arede-658677221/">
-               <LinkedInIcon class="size-4 md:size-6"/>
-			    LinkedIn
-			</SocialPill>
-			<SocialPill href="https://github.com/RadamantiumX">
-				<GitHubIcon class="size-4 md:size-6"/>
-				GitHub
-			 </SocialPill>
-			 <SocialPill href="https://github.com/RadamantiumX">
-				<MailIcon class="size-4 md:size-6"/>
-				eduardo.arede@gmail.com
-			 </SocialPill>
-		</nav>
-       <!--Socials-->  
+	  <SectionContainer class="py-44 pb-32"> 
+         <Header/>
 	  </SectionContainer>
 
 	  <!--Experience-->
 	  <SectionContainer id="experience">
-		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center" >
+		<SectionTitle>
 			<BriefcaseIcon class="size-7"/>
 			Work Experience
-		</h2>
+		</SectionTitle>
 		 <Experience/>
 	  </SectionContainer>
 	  <!--Experience-->
 
 	  <!--Projects -->
 	  <SectionContainer id="projects">
-		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center" >
+		<SectionTitle>
 			<CodeIcon class="size-7"/>
 			Projects
-		</h2>
+		</SectionTitle>
 		<Projects/>
 	  </SectionContainer>
 	  <!--Projects -->

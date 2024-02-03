@@ -1,10 +1,30 @@
-<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
+---
+import SocialNav from "./SocialNav.astro"
+---
+<header>
+<img
+  class="rounded-full size-20 mb-4"
+  src="https://avatars.githubusercontent.com/u/82120092?v=4"
+  alt="radamantium photo"
+/>
+<div>
+<h1
+  class="text-white lg:text-9xl md:text-4xl font-bold flex justify-center flex-col gap-x-4 pb-6 lg:pb-10"
+>
+<div class="flex flex-row">
+  Hello<span class="text-red-800">!</span>
+</div> 
+  <span class="lg:text-lg">I'm Eduardo Arede <a href="#" class="text-red-800 hover:text-red-600 italic">(RadamantiumX)</a></span>
+</h1>
 
-  <nav class="flex flex-row gap-x-10 opacity-80">
-    <a href="#top">Home</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+</div>
+<h3 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+  <span class="text-yellow-200/90">+3 year working in the web developing.</span
+  ><span class="text-red-200/90"> From Buenos Aires, Argentina.</span><span
+    class="opacity-80">Web solutions and much more...</span>
+</h3>
+
+<!--Socials -->
+ <SocialNav/>
+<!--Socials -->
 </header>

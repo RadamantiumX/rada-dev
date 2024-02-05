@@ -2,24 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import BriefcaseIcon from '../components/icons/Briefcase.astro';
 import CodeIcon from '../components/icons/Code.astro';
+import About from '../components/About.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
-import Header from '../components/Header.astro';
+
 import SectionTitle from '../components/SectionTitle.astro';
 ---
 
 <Layout 
-title="Radamantium Portfolio | Solutions & web developer"
+title="Eduardo Arede Portfolio | Solutions & web developer"
 description='Web developing and much more. If you wanna create a modern website, i can help with that, you can see my experience and projects. Enter to comprobe it...🚀'
 >
 	<main class="px-4">
-	  <SectionContainer class="py-44 pb-32"> 
-         <Header/>
-	  </SectionContainer>
-
+	  <About/>
+  
 	  <!--Experience-->
-	  <SectionContainer id="experience">
+	  <SectionContainer class="mt-8" id="experience">
 		<SectionTitle>
 			<BriefcaseIcon class="size-7"/>
 			Work Experience

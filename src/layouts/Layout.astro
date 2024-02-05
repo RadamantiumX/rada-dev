@@ -1,7 +1,8 @@
 ---
 import "@fontsource-variable/onest"
-import Navbar from "../components/Navbar.astro"
+import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro";
 interface Props {
 	title: string;
 	description: string;
@@ -18,11 +19,11 @@ const { description, title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		
 		<title>{title}</title>
 	</head>
-	<body>
-		
-		<Navbar/>
+	<body>	
+		<Header/>
 		<slot />
 		<Footer/>
 	</body>
@@ -45,7 +46,13 @@ const { description, title } = Astro.props;
 		
 	}
 	header {
-		height: 80vh;
+		height: 100vh;
+		background-image: linear-gradient(to top,  rgba(24, 26, 29, 0.404)0%,rgba(50, 24, 92, 0.404)100%), url(https://images.pexels.com/photos/167684/pexels-photo-167684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+		/*background-image: -webkit-linear-gradient(120deg, #013A6B 45%, #4CBFFF 45%);*/
+		background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
 	}
 	
 	/* Si el usuario tiene desactivada las animaciones, no las verá. */

@@ -1,28 +1,34 @@
 ---
 import MenuHamburguerIcon from "./icons/MenuHamburguer.astro"
 import CloseIcon from "./icons/Close.astro"
+import { imageConfig } from "astro:assets"
 
 
 const NAV_ELEMENTS = [
   {
     id: "#top",
-    section: "Home"
+    section: "Home",
+	icon: "house",
   },
   {
     id: "#about",
-    section: "About"
+    section: "About me",
+	icon: "user"
   },
   {
     id: "#experience",
-    section: "Experience"
+    section: "Experience",
+	icon: "briefcase"
   },
   {
     id: "#projects",
-    section: "Projects"
+    section: "Projects",
+	icon: "code"
   },
   {
     id: "#contact",
-    section: "Contact"
+    section: "Contact",
+	icon: "envelope-open"
   },
 ]
 
@@ -39,34 +45,34 @@ const NAV_ELEMENTS = [
 
 
 
-<nav class="border-gray-200 dark:bg-gray-800 dark:border-gray-700 absolute">
+<nav class="border-gray-200 dark:bg-gray-800 dark:border-gray-700">
   <div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4">
     
-    <button data-collapse-toggle="navbar-hamburger" type="button" class="hamburger inline-flex items-center justify-center p-2 w-15 h-15 text-sm text-gray-300 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-yellow-700 dark:focus:ring-yellow-600" aria-controls="navbar-hamburger" aria-expanded="false">
+    <button data-collapse-toggle="navbar-hamburger" data-toggle="modal" type="button" class="hamburger z-10 flex items-center justify-center p-2 w-15 h-15 text-sm text-gray-300 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-yellow-700 dark:focus:ring-yellow-600" aria-controls="navbar-hamburger" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
-      <MenuHamburguerIcon class="w-9 h-9 svg-icon hover:w-10 hover:h-10"/>
+      <MenuHamburguerIcon class="w-9 h-9 svg-icon -z-10 hover:w-10 hover:h-10"/>
     </button>
-    <div class="nav-menu text-justify bg-black" id="navbar-hamburger">
+
+    <div  tabindex="-1" role="dialog" aria-hidden="true" class="nav-menu modal z-1 overflow-auto text-justify bg-black" id="navbar-hamburger">
 	 <CloseIcon class="close-button rounded-lg w-8 h-8 hover:bg-yellow-500 cursor-pointer"/>	
       {NAV_ELEMENTS.map(item =>(
-		<a href={item.id}>{item.section}</a>
+		<a href={item.id}>{item.section} <i class={`fa-solid fa-${item.icon}`}></i></a>
 	  ))}
     </div>
+
   </div>
 </nav>
 
 <script type="text/javascript">
   const menu = document.querySelector('.nav-menu');
-  const hamburger = document.querySelector('.hamburger');
-  const svgIcon = document.querySelector('.svg-icon');
+  const hamburger = document.querySelector('.hamburger, .svg-icon');
+  
 
    hamburger.addEventListener("click", e => {
     menu.classList.toggle("spread")
   })
 
-  svgIcon.addEventListener("click", e => {
-    menu.classList.toggle("spread")
-  })
+  
 
 
   window.addEventListener("click", e => {
@@ -89,7 +95,7 @@ const NAV_ELEMENTS = [
 	cursor: pointer;
 	
 	box-shadow: 0 0 6px rgba(0, 0, 0,0.5);
-	z-index: 5000;
+	
 }
 .hamburger:hover{
   animation-name: rotate;
@@ -97,7 +103,7 @@ const NAV_ELEMENTS = [
   animation-delay: 0.5s;
 }
 
-.close-button{
+.close-button:hover{
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-delay: 0.5s;

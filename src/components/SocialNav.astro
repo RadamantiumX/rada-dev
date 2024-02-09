@@ -3,11 +3,11 @@ import SocialPill from "./SocialPill.astro"
 import LinkedInIcon from "./icons/LinkedIn.astro"
 import GitHubIcon from "./icons/GitHub.astro"
 import MailIcon from "./icons/Mail.astro"
-import Badge from "./Badge.astro"
+
 ---
 
 <nav class="flex gap-4 mt-8 flex-wrap">
-    <SocialPill href="https://www.linkedin.com/in/eduardo-arede-658677221/">
+    <SocialPill classProps="hover:bg-blue-700" href="https://www.linkedin.com/in/eduardo-arede-658677221/">
        <LinkedInIcon class="size-4 md:size-6"/>
         LinkedIn
         {/* <a
@@ -15,11 +15,11 @@ import Badge from "./Badge.astro"
       target="_blank"
         rel="noopener"><Badge>Open to work</Badge></a>*/}
     </SocialPill>
-    <SocialPill href="https://github.com/RadamantiumX">
+    <SocialPill classProps="hover:bg-black" href="https://github.com/RadamantiumX">
         <GitHubIcon class="size-4 md:size-6"/>
         GitHub
      </SocialPill>
-     <SocialPill href="https://github.com/RadamantiumX">
+     <SocialPill classProps="hover:bg-red-600" href="mailto:eduardo.arede@gmail.com">
         <MailIcon class="size-4 md:size-6"/>
         eduardo.arede@gmail.com
      </SocialPill>

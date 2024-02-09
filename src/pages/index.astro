@@ -6,7 +6,7 @@ import About from '../components/About.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
-
+import Contact from '../components/Contact.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 ---
 
@@ -20,7 +20,7 @@ description='Web developing and much more. If you wanna create a modern website,
 	  <!--Experience-->
 	  <SectionContainer class="mt-8" id="experience">
 		<SectionTitle>
-			<BriefcaseIcon class="size-7"/>
+			<BriefcaseIcon class="size-7 text-yellow-500"/>
 			Work Experience
 		</SectionTitle>
 		 <Experience/>
@@ -30,12 +30,20 @@ description='Web developing and much more. If you wanna create a modern website,
 	  <!--Projects -->
 	  <SectionContainer id="projects">
 		<SectionTitle>
-			<CodeIcon class="size-7"/>
+			<CodeIcon class="size-7 text-yellow-500"/>
 			Projects
 		</SectionTitle>
 		<Projects/>
 	  </SectionContainer>
 	  <!--Projects -->
+     
+	  <SectionContainer id="contact">
+         <SectionTitle>
+			Contact me
+		 </SectionTitle> 
+		 <Contact/>
+	  </SectionContainer>
+   
 
 	</main>
 </Layout>

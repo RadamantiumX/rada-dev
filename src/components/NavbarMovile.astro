@@ -1,0 +1,212 @@
+---
+import MenuHamburguerIcon from "./icons/MenuHamburguer.astro"
+import CloseIcon from "./icons/Close.astro"
+import { imageConfig } from "astro:assets"
+
+
+const NAV_ELEMENTS = [
+  {
+    id: "#top",
+    section: "Home",
+	icon: "house",
+  },
+  {
+    id: "#about",
+    section: "About me",
+	icon: "user"
+  },
+  {
+    id: "#experience",
+    section: "Experience",
+	icon: "briefcase"
+  },
+  {
+    id: "#projects",
+    section: "Projects",
+	icon: "code"
+  },
+  {
+    id: "#contact",
+    section: "Contact",
+	icon: "envelope-open"
+  },
+]
+
+---
+{/* <nav class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
+  <div class="nav flex flex-row gap-x-10 opacity-80">
+    {NAV_ELEMENTS.map(element => (
+      <a class="hover:underline" href={element.id}>{element.section}</a>
+    ))}
+  </div>
+</nav>*/}
+
+
+
+
+
+<nav class="block sm:hidden border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+  <div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4">
+    
+    <button data-collapse-toggle="navbar-hamburger" data-toggle="modal" type="button" class="hamburger z-10 flex items-center justify-center p-2 w-15 h-15 text-sm text-gray-300 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-yellow-700 dark:focus:ring-yellow-600" aria-controls="navbar-hamburger" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <MenuHamburguerIcon class="w-9 h-9 svg-icon -z-10 hover:w-10 hover:h-10"/>
+    </button>
+
+    <div  tabindex="-1" role="dialog" aria-hidden="true" class="nav-menu modal z-1 overflow-auto text-justify bg-black" id="navbar-hamburger">
+	 <CloseIcon class="close-button rounded-lg w-8 h-8 hover:bg-yellow-500 cursor-pointer"/>	
+      {NAV_ELEMENTS.map(item =>(
+		<a href={item.id}>{item.section} <i class={`fa-solid fa-${item.icon}`}></i></a>
+	  ))}
+    </div>
+
+  </div>
+</nav>
+
+<script type="text/javascript">
+  const menu = document.querySelector('.nav-menu');
+  const hamburger = document.querySelector('.hamburger, .svg-icon');
+  
+
+   hamburger.addEventListener("click", e => {
+    menu.classList.toggle("spread")
+  })
+
+  
+
+
+  window.addEventListener("click", e => {
+    if (menu.classList.contains("spread") && e.target != menu && e.target != hamburger) {
+      menu.classList.toggle("spread")
+    }
+  }) 
+</script>
+
+<style>
+  .hamburger{
+	/*Fijamos la imagen*/
+	position: fixed;
+	/*Marcamos cuanto tiene que tener arriba*/
+	top: 30px;
+	right: 30px;
+	
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	
+	box-shadow: 0 0 6px rgba(0, 0, 0,0.5);
+	
+}
+.hamburger:hover{
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-delay: 0.5s;
+}
+
+.close-button:hover{
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-delay: 0.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100vw;
+	height: 100%;
+	/*Establecemos la imagen de fondo que es un color degradado*/
+	background-image: linear-gradient(to top,  rgba(24, 26, 29, 0.404)0%,rgba(50, 24, 92, 0.404)100%);
+	/*Acomodamos los elementos*/
+	display: flex;
+	/*Los dejamos en columna*/
+	flex-direction: column;
+	/*Con esto se separaran uno de otro los elementos*/
+	justify-content: space-evenly;
+	align-items: center;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+	transition: transform .3s ease-in-out;
+	/*Trasladamos, lo ocultamos con ese valor, con valor "0" se vuelve a mostrar*/
+	transform: translate(100%);
+	transition-duration: 0.5s;
+    transition-delay: 0.2s; 
+	z-index: 5000;
+}
+.nav-menu  a{
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none; 
+  text-align: center;
+	line-height: 50px;
+	height: 50px;
+	width: 60%;
+	transition: all 0.3s;
+	position: relative;
+}
+.nav-menu a:hover{
+	--tw-text-opacity: 1;
+    color: rgb(194 120 3 / var(--tw-text-opacity));
+}
+.nav-menu  a span{
+	transition: all 0.3s;
+}
+.nav-menu  a::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(255,255,255,0.5);
+	border-bottom-color: rgba(255,255,255,0.5);
+	transform: scale(0.1, 1);
+}
+.nav-menu  a:hover span{
+	letter-spacing: 2px;
+}
+.nav-menu  a:hover::before{
+	opacity: 1;	
+	transform: scale(1, 1);	
+}
+.nav-menu  a::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	
+}
+.nav-menu  a:hover::after{
+	opacity: 0;	
+	transform: scale(0.1, 1);
+}
+
+
+
+/*Solo estara activa con el clic en el menu hamburgesa
+Aparece el menu de navegacion*/
+.spread{
+    transform: translate(0);
+	transition-duration: 0.9s;
+    transition-delay: 0.5s; 
+}
+</style>

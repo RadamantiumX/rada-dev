@@ -1,8 +1,11 @@
 ---
 import "@fontsource-variable/onest"
-import Navbar from "../components/Navbar.astro";
+import SocialBanner from "../components/SocialBanner.astro"
 import Footer from "../components/Footer.astro"
 import Header from "../components/Header.astro";
+import SocialNav from "../components/SocialNav.astro";
+import OtherSocials from "../components/OtherSocials.astro"
+
 interface Props {
 	title: string;
 	description: string;
@@ -25,7 +28,13 @@ const { description, title } = Astro.props;
 	</head>
 	<body>	
 		<Header/>
+		<SocialBanner title="Find me here too..." emoji="⬇">
+          <SocialNav/>
+		</SocialBanner>
 		<slot />
+		<SocialBanner title="My other socials..." emoji="🚀">
+			<OtherSocials />
+		</SocialBanner>	
 		<Footer/>
 	</body>
 </html>
@@ -43,18 +52,34 @@ const { description, title } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		background-image: linear-gradient(to right,#0d0c0c  10%, rgb(22, 18, 18) 100%);
+		/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=2b292d&c2=221b22&gt=r&gd=dtt
+*/
+background: #2B292D;
+background: radial-gradient(at center top, #2B292D, #221B22);
 		
 	}
 	header {
-		height: 100vh;
-		background-image: linear-gradient(to top,  rgba(24, 26, 29, 0.404)0%,rgba(50, 24, 92, 0.404)100%), url(https://images.pexels.com/photos/167684/pexels-photo-167684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+		height: 70vh;
+		background-image: linear-gradient(to top,  rgba(24, 25, 26, 0.404)0%,rgba(20, 2, 48, 0.404)100%), url(https://img.freepik.com/foto-gratis/concepto-collage-html-css-persona_23-2150061981.jpg?w=1380&t=st=1707506750~exp=1707507350~hmac=1ac95049a29891f77bbf45ed9fcb2ac6294cc49a1f5d51681d22ba10cca6aa7a);
 		/*background-image: -webkit-linear-gradient(120deg, #013A6B 45%, #4CBFFF 45%);*/
 		background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
 	}
+	.banner-social {
+		height: 20vh;
+		background-image: linear-gradient(to top,  rgba(24, 26, 29, 0.404)0%,rgba(50, 24, 92, 0.404)100%);
+		/*background-image: -webkit-linear-gradient(120deg, #013A6B 45%, #4CBFFF 45%);*/
+		background-size: cover;
+        background-repeat: no-repeat;
+       /* background-attachment: fixed;*/
+        background-position: center;
+	}
+
+	
 	
 	/* Si el usuario tiene desactivada las animaciones, no las verá. */
 	@media (prefers-reduced-motion: reduce){

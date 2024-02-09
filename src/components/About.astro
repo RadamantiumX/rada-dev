@@ -1,16 +1,27 @@
 ---
-import Badge from "./Badge.astro"
+import ButtonPill from "./ButtonPill.astro"
 ---
+
 <section id="about" class="h-3/4">
-   <div class="about-box flex flex-col justify-center sm:flex-row w-auto m-auto h-auto gap-10 mb-40"> 
-   <article class="w-1/2">
-    <h3 class="text-5xl mb-5 font-semibold">What's my profession?</h3>
-      <p class="text-xl">Throughout my life, is the constante Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo odit architecto minima ratione commodi ipsam! Blanditiis maxime voluptates voluptas alias praesentium hic neque consequuntur, reprehenderit ipsa quaerat expedita ut qui!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio beatae expedita molestiae, dignissimos eaque ea tenetur ab explicabo, eligendi, dolorem velit repudiandae voluptas consequuntur porro fugit tempora reiciendis modi voluptates!</p>
-      <Badge>Open to work</Badge>
+   <div class="about-box text-center items-center flex flex-col justify-center sm:flex-row w-auto m-auto h-auto gap-10 mb-40 sm:text-left"> 
+   <article class="w-4/6">
+    <h3 class="sm:text-5xl text-2xl mb-5 font-semibold">What's my profession<span class="text-yellow-500">?</span></h3>
+      <p class="sm:text-xl text-base text-pretty">Throughout my life, I have had different occupations, but the world of IT has always been my main focus. After my experience in a metallurgical factory, I joined an important car factory <span class="italic">(from Japan)</span>, which is one of the most important in the world. It was in that place where I learned the concept of <span class="italic font-semibold">"Continuous Improvement & Problem solving"</span>, which I put into practice both, in my work environment and outside of it.</p>
+      <p class="sm:text-xl text-base text-pretty">
+         I have only Free-lancer projects for the moment, but, my mind is open for everything<span class="text-yellow-500">...</span>
+      </p>
+      <div class="flex justify-center">
+      <ButtonPill
+       classProps="bg-green-700"
+       href="https://www.linkedin.com/in/eduardo-arede-658677221/"
+      >
+      #Open to work
+      </ButtonPill>
+     </div>
    </article>
      <div>
         
-        <img class="rounded-full size-60 sm:size-80" src="https://avatars.githubusercontent.com/u/82120092?v=4" alt="Eduado Arede image" title="Eduardo Arede">
+        <img class="rounded-full size-40 md:size-60 sm:size-100" src="https://avatars.githubusercontent.com/u/82120092?v=4" alt="Eduado Arede image" title="Eduardo Arede">
      </div>
     </div>
 </section>

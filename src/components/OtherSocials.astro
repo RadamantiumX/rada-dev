@@ -1,0 +1,21 @@
+---
+import SocialPill from "./SocialPill.astro"
+import InstagramIcon from "./icons/Instagram.astro"
+import TwitterIcon from "./icons/Twitter.astro"
+import FacebookIcon from "./icons/Facebook.astro"
+---
+
+<nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill classProps="hover:bg-fuchsia-800" href="https://www.instagram.com/edu_4rede/?hl=es-la">
+       <InstagramIcon class="size-4 md:size-6"/>
+       Instagram
+    </SocialPill>
+    <SocialPill classProps="" href="https://twitter.com/AredeEduardo">
+        <TwitterIcon class="size-4 md:size-6"/>
+        X
+     </SocialPill>
+    <SocialPill classProps="hover:bg-indigo-900" href="https://www.facebook.com/eduardo.arede.3">
+        <FacebookIcon class="size-4 md:size-6"/>
+        Facebook
+    </SocialPill>
+</nav>

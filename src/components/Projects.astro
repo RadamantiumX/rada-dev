@@ -3,6 +3,8 @@
 import Vite from "./icons/Vite.astro"
 import TailwindCSS from "./icons/TailwindCSS.astro"
 import React from "./icons/React.astro"
+import Laravel from "./icons/Laravel.astro"
+import MySql from "./icons/MySql.astro"
 
 const TAGS = {
     VITE: {
@@ -19,31 +21,50 @@ const TAGS = {
         name: "React",
         class: "bg-white text-black",
         icon: React
+    },
+    LARAVEL: {
+        name: "Larvel",
+        class: "bg-white text-black",
+        icon: Laravel
+    },
+    MYSQL: {
+        name: "MySQL",
+        class: "bg-white text-black",
+        icon: MySql
     }
 }
 
 const PROJECTS = [
     {
         title: 'Epikka | Analytics & Marketing',
-        description: 'Brindamos las mejores estratégias para Marketing y Analiticas para los negocios digitales',
-        link: 'https://epikka-new.vercel.app/home',
+        description: 'We provide the best Marketing and Analytics strategies for digital businesses',
+        link: 'https://epikka-new.vercel.app',
         github: 'https://github.com/RadamantiumX/epikka-new',
         image: '../../public/projects/epikka-web.webp',
         tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT]
-    }
+    },
+    {
+        title: 'Microplastic detection | Application for Researchers',
+        description: 'Based on machine learning and combining its own algorithms that allow manual or automatic analysis of its spectral data to identify, count and measure microplastics',
+        link: 'https://react-particle-count.vercel.app',
+        github: 'https://github.com/RadamantiumX/react-particle-count',
+        image: '../../public/projects/particle-count-webpage.webp',
+        tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT, TAGS.LARAVEL, TAGS.MYSQL]
+    },
+
 ]
 ---
 
 {
-    PROJECTS.map(({ title, description, tags, image }) => (
-        <article>
-           <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+    PROJECTS.map(({ title, description, tags, image, link }) => (
+        <article class="mt-10">
+           <h3 class="text-2xl font-semibold text-yellow-200 mb-2"><a href={link}>{title}</a></h3>
            <p class="text-lg mb-4 text-pretty">{description}</p>
            <ul class="flex gap-x-2 flex-row mb-2">
              {
                 tags.map(tag => (
                     <li>
-                     <span class={`flex gap-x-4 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                     <span class={`flex bg-yellow-500 gap-x-4 rounded-full text-xs ${tag.class} py-1 px-2`}>
                        <tag.icon class="size-4"/>
                        {tag.name} 
                      </span>     

@@ -28,16 +28,34 @@ const NAV_ELEMENTS = [
 ]
 
 ---
-<nav class="desktop-navbar sm:block hidden  top-0  h-10 fixed w-full">
+<nav class="nav-desk sm:block hidden  top-0 z-30  h-10 fixed w-full">
 <div class="flex flex-row  z-30 justify-center align-middle gap-x-10">
 {NAV_ELEMENTS.map(item => (
     <a class="text-gray-200 hover:text-yellow-500 ease-in-out" href={item.id}>{item.section}</a>
 ))}
 </div>
 </nav>
+<script>
+  const navDesk = document.querySelector(".nav-desk");
+
+  window.onscroll = function() {  scrollBgChange() }
+
+  function scrollBgChange() {
+    if (document.documentElement.scrollTop !== 0) {
+        navDesk.classList.add('desktop-navbar-scrolled')
+        navDesk.classList.remove('desktop-navbar-top')
+    }else{
+      navDesk.classList.add('desktop-navbar-top')
+      navDesk.classList.remove('desktop-navbar-scrolled')
+    }
+  }
+</script>
 
 <style>
- .desktop-navbar{
+ .desktop-navbar-top{
   background-image: linear-gradient(to top,  rgba(24, 26, 29, 0.404)0%,rgba(50, 24, 92, 0.404)100%);
+ }
+ .desktop-navbar-scrolled{
+  background: #000;
  }
 </style>

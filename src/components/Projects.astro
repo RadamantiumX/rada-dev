@@ -7,6 +7,7 @@ import React from "./icons/React.astro"
 import MuiMaterial from "./icons/MuiMaterial.astro"
 import SocialPill from "./SocialPill.astro"
 import GitHub from "./icons/GitHub.astro"
+import Link from "./icons/Link.astro"
 
 const TAGS = {
     VITE: {
@@ -54,7 +55,7 @@ const PROJECTS = [
         description: 'It is a sustainability project that aims to help in the diagnosis of water quality.',
         link: 'https://pruebas.msthompson.edu.ar/',
         github: 'https://github.com/RadamantiumX/react-particle-count',
-        image: '../../public/projects/agua_limpia.webp',
+        image: 'https://i.ibb.co/GnY7sK5/agua-mejor-vida.webp',
         tags: [TAGS.VITE, TAGS.MUIMATERIAL, TAGS.REACT]
     },
     {
@@ -62,7 +63,7 @@ const PROJECTS = [
         description: 'The best user experience, on any device and optimized.',
         link: 'https://epsi-web.vercel.app/',
         github: 'https://github.com/RadamantiumX/EpsiWeb',
-        image: '../../public/projects/epsiweb.webp',
+        image: 'https://i.ibb.co/YhDTYKZ/527shots-so.webp',
         tags: [TAGS.VITE, TAGS.MUIMATERIAL, TAGS.REACT]
     },
 
@@ -70,11 +71,11 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({ title, description, tags, image, link }) => (
+    PROJECTS.map(({ title, description, tags, image, link, github }) => (
         <article class="mt-10">
            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
            <p class="text-lg mb-4 text-pretty">{description}</p>
-           <a href={link} class="underline hover:text-yellow-500" target="_blank">Link</a>
+           
            <ul class="flex gap-x-2 flex-row mb-2">
              {
                 tags.map(tag => (
@@ -88,11 +89,17 @@ const PROJECTS = [
                 ))
              }
             </ul>
-            <img class="rounded" src={`${image}`} alt={`Project screenshot ${title}`}/>
-            
-            <SocialPill classProps="" href="">
-            &lt;Help me with stars 😉 ⭐&gt; <GitHub class="size-5"/>
+            <div class="flex flex-row gap-8">
+            <img class="rounded h-1/2 w-1/2" src={image} alt={`Project screenshot ${title}`}/>
+            <div class="flex flex-col justify-center gap-y-8">
+            <SocialPill classProps="h-10 w-full" href={link}>
+             Link <Link class="size-5"/>
             </SocialPill>
+            <SocialPill classProps="h-10 w-full" href={github}>
+             Help me with stars 😉 ⭐ <GitHub class="size-5"/>
+            </SocialPill>
+            </div>
+            </div>
             
         </article>
     ))

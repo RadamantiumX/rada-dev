@@ -1,6 +1,14 @@
-
+---
+import Send from "./icons/Send.astro";
+---
 <form class="flex flex-col gap-y-2" action="">
-    <input type="text">
-    <input type="text">
-    <textarea name="" id="" cols="30" rows="5"></textarea>
+    <label for="email">Email</label>
+    <input class="bg-gray-600 p-1 rounded-md hover:bg-gray-500" name="email" type="email" placeholder="example@mail.com"/>
+    <label for="name">Name</label>
+    <input class="bg-gray-600 p-1 rounded-md hover:bg-gray-500" name="name" type="text" placeholder="John Doe"/>
+    <label for="message">Message</label>
+    <textarea class="bg-gray-600 p-1 rounded-md hover:bg-gray-500" class="resize-none focus:border-sky-500" name="message" id="" cols="30" rows="5"></textarea>
+    <button class="flex flex-row justify-center gap-2 rounded-full cursor-pointer text-2xl bg-green-700 mt-11 p-1 px-5 hover:bg-yellow-500 hover:scale-110 transition">
+     <Send class="size-6"/> Send
+    </button>
 </form>

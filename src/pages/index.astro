@@ -1,13 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import BriefcaseIcon from '../components/icons/Briefcase.astro';
-import CodeIcon from '../components/icons/Code.astro';
-import About from '../components/About.astro';
-import Experience from '../components/Experience.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Projects from '../components/Projects.astro';
-import Contact from '../components/Contact.astro';
-import SectionTitle from '../components/SectionTitle.astro';
+import Layout from "../layouts/Layout.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import MailOpenedIcon from "../components/icons/MailOpened.astro";
+import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import SectionTitle from "../components/SectionTitle.astro";
 ---
 
 <Layout 
@@ -39,6 +40,7 @@ description='Web developing and much more. If you wanna create a modern website,
      
 	  <SectionContainer id="contact">
          <SectionTitle>
+			<MailOpenedIcon class="size-7 text-yellow-500"/>
 			Contact me
 		 </SectionTitle> 
 		 <Contact/>

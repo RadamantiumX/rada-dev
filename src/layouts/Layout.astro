@@ -6,6 +6,7 @@ import Header from "../components/Header.astro";
 import SocialNav from "../components/SocialNav.astro";
 import OtherSocials from "../components/OtherSocials.astro"
 
+
 interface Props {
 	title: string;
 	description: string;
@@ -32,7 +33,7 @@ const { description, title } = Astro.props;
           <SocialNav/>
 		</SocialBanner>
 		<slot />
-		<SocialBanner title="My other socials..." emoji="🚀">
+		<SocialBanner title="Follow me here too..." emoji="🚀">
 			<OtherSocials />
 		</SocialBanner>	
 		<Footer/>
@@ -52,10 +53,6 @@ const { description, title } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		/*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=2b292d&c2=221b22&gt=r&gd=dtt
-*/
 background: #2B292D;
 background: radial-gradient(at center top, #2B292D, #221B22);
 		

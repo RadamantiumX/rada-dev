@@ -3,8 +3,10 @@
 import Vite from "./icons/Vite.astro"
 import TailwindCSS from "./icons/TailwindCSS.astro"
 import React from "./icons/React.astro"
-import Laravel from "./icons/Laravel.astro"
-import MySql from "./icons/MySql.astro"
+
+import MuiMaterial from "./icons/MuiMaterial.astro"
+import SocialPill from "./SocialPill.astro"
+import GitHub from "./icons/GitHub.astro"
 
 const TAGS = {
     VITE: {
@@ -22,22 +24,18 @@ const TAGS = {
         class: "bg-white text-black",
         icon: React
     },
-    LARAVEL: {
-        name: "Larvel",
+    MUIMATERIAL: {
+        name: "Material UI",
         class: "bg-white text-black",
-        icon: Laravel
-    },
-    MYSQL: {
-        name: "MySQL",
-        class: "bg-white text-black",
-        icon: MySql
+        icon: MuiMaterial
     }
+    
 }
 
 const PROJECTS = [
     {
         title: 'Epikka | Analytics & Marketing',
-        description: 'We provide the best Marketing and Analytics strategies for digital businesses',
+        description: 'We provide the best Marketing and Analytics strategies for digital businesses.',
         link: 'https://epikka-new.vercel.app',
         github: 'https://github.com/RadamantiumX/epikka-new',
         image: '../../public/projects/epikka-web.webp',
@@ -45,12 +43,21 @@ const PROJECTS = [
     },
     {
         title: 'Microplastic detection | Application for Researchers',
-        description: 'Based on machine learning and combining its own algorithms that allow manual or automatic analysis of its spectral data to identify, count and measure microplastics',
+        description: 'Based on machine learning and combining its own algorithms that allow manual or automatic analysis of its spectral data to identify, count and measure microplastics.',
         link: 'https://react-particle-count.vercel.app',
         github: 'https://github.com/RadamantiumX/react-particle-count',
         image: '../../public/projects/particle-count-webpage.webp',
-        tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT, TAGS.LARAVEL, TAGS.MYSQL]
+        tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT]
     },
+    {
+        title: 'M.A.L.M.V | Educational website',
+        description: 'It is a sustainability project that aims to help in the diagnosis of water quality.',
+        link: 'https://pruebas.msthompson.edu.ar/',
+        github: 'https://github.com/RadamantiumX/react-particle-count',
+        image: '../../public/projects/malmv.webp',
+        tags: [TAGS.VITE, TAGS.MUIMATERIAL, TAGS.REACT]
+    },
+
 
 ]
 ---
@@ -69,10 +76,16 @@ const PROJECTS = [
                        {tag.name} 
                      </span>     
                     </li>
+                   
                 ))
              }
             </ul>
             <img class="rounded" src={image} alt={`Project screenshot ${title}`}/>
+            
+            <SocialPill classProps="" href="">
+            &lt;Help me with stars 😉 ⭐&gt; <GitHub class="size-5"/>
+            </SocialPill>
+            
         </article>
     ))
 }

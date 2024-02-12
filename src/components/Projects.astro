@@ -38,7 +38,7 @@ const PROJECTS = [
         description: 'We provide the best Marketing and Analytics strategies for digital businesses.',
         link: 'https://epikka-new.vercel.app',
         github: 'https://github.com/RadamantiumX/epikka-new',
-        image: '../../public/projects/epikka-web.webp',
+        image: '../../public/projects/epikka.webp',
         tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT]
     },
     {
@@ -46,7 +46,7 @@ const PROJECTS = [
         description: 'Based on machine learning and combining its own algorithms that allow manual or automatic analysis of its spectral data to identify, count and measure microplastics.',
         link: 'https://react-particle-count.vercel.app',
         github: 'https://github.com/RadamantiumX/react-particle-count',
-        image: '../../public/projects/particle-count-webpage.webp',
+        image: '../../public/projects/microplastic.webp',
         tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT]
     },
     {
@@ -54,10 +54,17 @@ const PROJECTS = [
         description: 'It is a sustainability project that aims to help in the diagnosis of water quality.',
         link: 'https://pruebas.msthompson.edu.ar/',
         github: 'https://github.com/RadamantiumX/react-particle-count',
-        image: '../../public/projects/malmv.webp',
+        image: '../../public/projects/agua_limpia.webp',
         tags: [TAGS.VITE, TAGS.MUIMATERIAL, TAGS.REACT]
     },
-
+    {
+        title: 'EpsiWeb | Website Development',
+        description: 'The best user experience, on any device and optimized.',
+        link: 'https://epsi-web.vercel.app/',
+        github: 'https://github.com/RadamantiumX/EpsiWeb',
+        image: '../../public/projects/epsiweb.webp',
+        tags: [TAGS.VITE, TAGS.MUIMATERIAL, TAGS.REACT]
+    },
 
 ]
 ---
@@ -65,8 +72,9 @@ const PROJECTS = [
 {
     PROJECTS.map(({ title, description, tags, image, link }) => (
         <article class="mt-10">
-           <h3 class="text-2xl font-semibold text-yellow-200 mb-2"><a href={link}>{title}</a></h3>
+           <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
            <p class="text-lg mb-4 text-pretty">{description}</p>
+           <a href={link} class="underline hover:text-yellow-500" target="_blank">Link</a>
            <ul class="flex gap-x-2 flex-row mb-2">
              {
                 tags.map(tag => (

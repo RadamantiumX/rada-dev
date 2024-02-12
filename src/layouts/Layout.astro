@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro"
 import Header from "../components/Header.astro";
 import SocialNav from "../components/SocialNav.astro";
 import OtherSocials from "../components/OtherSocials.astro"
+import ReactDOM from "react-dom"
 
 
 interface Props {
@@ -27,7 +28,8 @@ const { description, title } = Astro.props;
 		
 		<title>{title}</title>
 	</head>
-	<body>	
+	<body>
+		
 		<Header/>
 		<SocialBanner title="Find me here too..." emoji="⬇">
           <SocialNav/>
@@ -37,6 +39,7 @@ const { description, title } = Astro.props;
 			<OtherSocials />
 		</SocialBanner>	
 		<Footer/>
+	   
 	</body>
 </html>
 <style is:global>

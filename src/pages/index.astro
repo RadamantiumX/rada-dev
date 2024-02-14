@@ -54,6 +54,7 @@ other={t("othersocials.other")}
 			{t("experience.title")}
 		</SectionTitle>
 		 <Experience
+		   date={t("experience.date")}
 		   sub1={t("experience.sub1")}
 		   desc1={t("experience.desc1")}
 		   sub2={t("experience.sub2")}
@@ -66,9 +67,18 @@ other={t("othersocials.other")}
 	  <SectionContainer id="projects">
 		<SectionTitle>
 			<CodeIcon class="size-7 text-yellow-500"/>
-			Projects
+			{t("projects.title")}
 		</SectionTitle>
-		<Projects/>
+		<Projects
+		  sub1={t("projects.sub1")}
+		  desc1={t("projects.desc1")}
+		  sub2={t("projects.sub2")}
+		  desc2={t("projects.desc2")}
+		  sub3={t("projects.sub3")}
+		  desc3={t("projects.desc3")}
+		  sub4={t("projects.sub4")}
+		  desc4={t("projects.desc4")}
+		/>
 	  </SectionContainer>
 	  <!--Projects -->
      

@@ -33,9 +33,21 @@
     },
     "experience": {
         "title" : "Experiencia (IT)",
+        "date": "Ene 2023 - Jul 2023",
         "sub1": "Desarrollador PHP",
         "desc1": "Mi desempeño fue, principalmente, el de mantenimiento y mejora de una aplicación e-commerce, ya en producción.",
         "sub2": "Desarrollador ReactJS",
         "desc2": "Desarrollo y gestión de sitios web estaticos y, también, apliaciones dinámicas. Estas últimas, requerian la utilización de diferentes librerias y paquetes para resolver distintos problemas comerciales."
-    }
+    },
+    "projects": {
+        "title" : "Projectos",
+        "sub1": "Epikka | Analytics & Marketing",
+        "desc1": "Proveer las mejores estratégias en Marketing para negocios digitales.",
+        "sub2": "Microplastic detection | Solo con propósitos de investigación",
+        "desc2": "Utilizando técnicas de Machine Learning, y en combinación de algorítmos propios, se automatiza, mediante imágenes espectrales, el conteo y medición de microplásticos en el agua.",
+        "sub3": "M.A.L.M.V | Sitio web educacional",
+        "desc3": "Proyecto sustentable para determinar, y/o diágnosticas, la calidad en el agua.", 
+        "sub4": "EpsiWeb | Website Development",
+        "desc4": "Servicio de desarrollo web. La mejor experiencia para el usuario."
+     }
 }

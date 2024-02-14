@@ -9,6 +9,19 @@ import SocialPill from "./SocialPill.astro"
 import GitHub from "./icons/GitHub.astro"
 import Link from "./icons/Link.astro"
 
+interface Props {
+    sub1: string
+    desc1: string
+    sub2: string
+    desc2: string
+    sub3: string
+    desc3: string
+    sub4: string
+    desc4: string
+}
+
+const { sub1, desc1, sub2, desc2, sub3, desc3, sub4, desc4 } = Astro.props
+
 const TAGS = {
     VITE: {
         name: "Vite",
@@ -35,32 +48,32 @@ const TAGS = {
 
 const PROJECTS = [
     {
-        title: 'Epikka | Analytics & Marketing',
-        description: 'We provide the best Marketing and Analytics strategies for digital businesses.',
+        title:`${sub1}`,
+        description: `${desc1}` ,
         link: 'https://epikka-new.vercel.app',
         github: 'https://github.com/RadamantiumX/epikka-new',
         image: 'https://i.ibb.co/gzVh50t/epikka.webp',
         tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT]
     },
     {
-        title: 'Microplastic detection | Application for Researchers',
-        description: 'Based on machine learning and combining its own algorithms that allow manual or automatic analysis of its spectral data to identify, count and measure microplastics.',
+        title:`${sub2}`,
+        description: `${desc2}`,
         link: 'https://react-particle-count.vercel.app',
         github: 'https://github.com/RadamantiumX/react-particle-count',
         image: 'https://i.ibb.co/wKty2TQ/microplastic.webp',
         tags: [TAGS.VITE, TAGS.TAILWIND, TAGS.REACT]
     },
     {
-        title: 'M.A.L.M.V | Educational website',
-        description: 'It is a sustainability project that aims to help in the diagnosis of water quality.',
+        title:`${sub3}`,
+        description: `${desc3}`,
         link: 'https://pruebas.msthompson.edu.ar/',
         github: 'https://github.com/RadamantiumX/react-particle-count',
         image: 'https://i.ibb.co/GnY7sK5/agua-mejor-vida.webp',
         tags: [TAGS.VITE, TAGS.MUIMATERIAL, TAGS.REACT]
     },
     {
-        title: 'EpsiWeb | Website Development',
-        description: 'The best user experience, on any device and optimized.',
+        title:`${sub4}`,
+        description: `${desc4}`,
         link: 'https://epsi-web.vercel.app/',
         github: 'https://github.com/RadamantiumX/EpsiWeb',
         image: 'https://i.ibb.co/YhDTYKZ/527shots-so.webp',

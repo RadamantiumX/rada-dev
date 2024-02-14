@@ -34,9 +34,22 @@
     },
     "experience": {
         "title" : "Work Experience (IT)",
+        "date":"Jan 2023 - Jul 2023",
         "sub1": "PHP Developer",
         "desc1": "My tasks involved the maintenance, and post-production improvement, of an application developed in PHP intended for e-commerce.",
         "sub2": "ReactJS Developer",
         "desc2": "Development of static websites, and dynamic applications of greater complexity. In the latter, the use of the different libraries available to solve the commercial problem was very important."
+    },
+
+    "projects": {
+        "title" : "Projects",
+        "sub1": "Epikka | Analytics & Marketing",
+        "desc1": "Provide the best Marketing and Analytics strategies for digital businesses.",
+        "sub2": "Microplastic detection | Application for Researchers",
+        "desc2": "Based on machine learning and combining its own algorithms that allow manual or automatic analysis of its spectral data to identify, count and measure microplastics.",
+        "sub3": "M.A.L.M.V | Educational website",
+        "desc3": "It is a sustainability project that aims to help in the diagnosis of water quality.", 
+        "sub4": "EpsiWeb | Website Development",
+        "desc4": "Web development service. The best user experience, on any device and optimized." 
     }
 }

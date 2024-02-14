@@ -1,0 +1,10 @@
+---
+import SpainFlag from "./icons/SpainFlag.astro"
+import UKFlag from "./icons/UKFlag.astro"
+
+const {classAdds} = Astro.props
+---
+<nav class=`fixed ${classAdds} flex-row gap-4 z-50 ml-5`>
+    <a href="/"><UKFlag class="size-9"/></a>
+    <a href="/es"><SpainFlag class="size-9" /></a>
+</nav>

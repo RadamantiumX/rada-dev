@@ -9,22 +9,56 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
 import SectionTitle from "../components/SectionTitle.astro";
+import i18next, { t, changeLanguage } from "i18next";
+import {  Trans, HeadHrefLangs } from "astro-i18next/components";
+
+changeLanguage("en");
+
+// "Eduardo Arede Portfolio | Solutions & web developer"
+// 'Web developing and much more. If you wanna create a modern website, i can help with that, you can see my experience and projects. Enter to comprobe it...🚀'
 ---
 
 <Layout 
-title="Eduardo Arede Portfolio | Solutions & web developer"
-description='Web developing and much more. If you wanna create a modern website, i can help with that, you can see my experience and projects. Enter to comprobe it...🚀'
+title= {t("site.title")}
+description={t("site.description")}
+
+welcome={t("header.welcome")}
+name={t("header.name")}
+hdescription={t("header.hdescription")}
+location={t("header.location")}
+
+home={t("nav.home")}
+about={t("nav.about")}
+projects={t("nav.projects")}
+experience={t("nav.experience")}
+contact={t("nav.contact")}
+
+carrer={t("socialwork.carrer")}
+other={t("othersocials.other")}
 >
 	<main class="px-4">
-	  <About/>
+	  <About
+	   title={t("about.title")} 
+	   p1={t("about.p1")}
+	   italic={t("about.italic")}
+	   p2={t("about.p2")}
+	   semibold={t("about.semibold")}
+	   p3={t("about.p3")}
+	   p4={t("about.p4")}
+	  />
   
 	  <!--Experience-->
 	  <SectionContainer class="mt-8" id="experience">
 		<SectionTitle>
 			<BriefcaseIcon class="size-7 text-yellow-500"/>
-			Work Experience
+			{t("experience.title")}
 		</SectionTitle>
-		 <Experience/>
+		 <Experience
+		   sub1={t("experience.sub1")}
+		   desc1={t("experience.desc1")}
+		   sub2={t("experience.sub2")}
+		   desc2={t("experience.desc2")}
+		 />
 	  </SectionContainer>
 	  <!--Experience-->
 

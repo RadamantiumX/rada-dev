@@ -1,14 +1,26 @@
 ---
 import ButtonPill from "./ButtonPill.astro"
+
+interface Props{
+   title: string
+   p1: string
+   italic: string
+   p2: string
+   semibold: string
+   p3: string
+   p4: string
+}
+
+const { title, p1, italic, p2, semibold, p3, p4 } = Astro.props
 ---
 
 <section id="about" class="h-3/4">
    <div class="about-box text-center items-center flex flex-col justify-center sm:flex-row w-auto m-auto h-auto gap-10 mb-40 sm:text-left"> 
    <article class="w-4/6">
-    <h3 class="sm:text-5xl text-2xl mb-5 font-semibold">What's my profession<span class="text-yellow-500">?</span></h3>
-      <p class="sm:text-xl text-base text-pretty">Throughout my life, I have had different occupations, but the world of IT has always been my main focus. After my experience in a metallurgical factory, I joined an important car factory <span class="italic">(from Japan)</span>, which is one of the most important in the world. It was in that place where I learned the concept of <span class="italic font-semibold">"Continuous Improvement & Problem solving"</span>, which I put into practice both, in my work environment and outside of it.</p>
+    <h3 class="sm:text-5xl text-2xl mb-5 font-semibold">{title}<span class="text-yellow-500">?</span></h3>
+      <p class="sm:text-xl text-base text-pretty">{p1}<span class="italic">{italic}</span>{p2}<span class="italic font-semibold">{semibold}</span>{p3}</p>
       <p class="sm:text-xl text-base text-pretty">
-         I have only Free-lancer projects for the moment, but, my mind is open for everything<span class="text-yellow-500">...</span>
+         {p4}<span class="text-yellow-500">...</span>
       </p>
       <div class="flex justify-center">
       <ButtonPill

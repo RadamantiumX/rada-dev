@@ -1,28 +1,36 @@
 ---
+interface Props{
+  home: string;
+  about: string;
+  experience: string;
+  projects: string;
+  contact: string;
+}
+const { home, about, experience, projects, contact } = Astro.props
 const NAV_ELEMENTS = [
   {
     id: "#top",
-    section: "Home",
+    section: `${home}`,
 	
   },
   {
     id: "#about",
-    section: "About me",
+    section: `${about}`,
 	
   },
   {
     id: "#experience",
-    section: "Experience",
+    section: `${experience}`,
 	
   },
   {
     id: "#projects",
-    section: "Projects",
+    section: `${projects}`,
 	
   },
   {
     id: "#contact",
-    section: "Contact",
+    section: `${contact}`,
 	
   },
 ]

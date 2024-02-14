@@ -1,40 +1,58 @@
 ---
 import NavbarMovile from "./NavbarMovile.astro"
 import Navbar from "./Navbar.astro"
-import ButtonPill from "./ButtonPill.astro"
+import { FormattedMessage } from "react-intl"
 
+interface Props{
+   welcome: string
+   name: string
+   hdescription: string
+   location: string
+
+   home: string
+   about: string
+   experience: string
+   projects: string
+   contact: string
+}
+
+const { welcome, name, hdescription, location, home, about, experience, projects, contact } = Astro.props
 ---
 <header>
- <NavbarMovile/>
- <Navbar/>
+ <NavbarMovile
+ home={home}
+ about={about}
+ experience={experience}
+ projects={projects}
+ contact={contact}
+ />
+ <Navbar
+  home={home}
+  about={about}
+  experience={experience}
+  projects={projects}
+  contact={contact}
+ />
  <div class="flex flex-col items-center justify-center mt-20">
-  {/*<img
-    class="rounded-full size-20 mb-4"
-    src="https://avatars.githubusercontent.com/u/82120092?v=4"
-    alt="radamantium photo"
-  />*/}
+ 
   <div class="text-left">
   <h1
     class="text-gray-200 text-2xl font-bold flex justify-center flex-col gap-x-4 pb-6 lg:pb-10"
   >
   <div class="flex flex-row">
-    Welcome to my Portfolio<span class="text-yellow-500">!</span>
+    {welcome}<span class="text-yellow-500">!</span>
   </div> 
-    <span class="text-6xl">I'm Eduardo Arede<span class="text-yellow-500">.</span></span>
+    <span class="text-6xl">
+      {name}<span class="text-yellow-500">.</span></span>
   </h1>
   
   </div>
   <h3 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-    Full stack web developer and software solutions<span class="text-yellow-500">.</span>
+    {hdescription}<span class="text-yellow-500">.</span>
   </h3>
-  <p>From Buenos Aires, Argentina<span class="text-yellow-500">.</span></p>
-  {/* <h3 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-    <span class="text-yellow-200/90">+3 year working in the web developing.</span
-    ><span class="text-red-200/90"> From Buenos Aires, Argentina.</span><span
-      class="opacity-80">Web solutions and much more...</span>
-    </h3>*/}
-
-   
+  <p>{location}<span class="text-yellow-500">.</span></p>
+ 
+  
   </div> 
 </div>
 

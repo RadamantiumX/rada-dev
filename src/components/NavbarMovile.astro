@@ -1,33 +1,41 @@
 ---
 import MenuHamburguerIcon from "./icons/MenuHamburguer.astro"
 import CloseIcon from "./icons/Close.astro"
-import { imageConfig } from "astro:assets"
+import LangButtons from "./LangButtons.astro"
 
+interface Props{
+  home: string;
+  about: string;
+  experience: string;
+  projects: string;
+  contact: string;
+}
+const { home, about, experience, projects, contact } = Astro.props
 
 const NAV_ELEMENTS = [
   {
     id: "#top",
-    section: "Home",
+    section: `${home}`,
 	icon: "house",
   },
   {
     id: "#about",
-    section: "About me",
+    section: `${about}`,
 	icon: "user"
   },
   {
     id: "#experience",
-    section: "Experience",
+    section: `${experience}`,
 	icon: "briefcase"
   },
   {
     id: "#projects",
-    section: "Projects",
+    section: `${projects}`,
 	icon: "code"
   },
   {
     id: "#contact",
-    section: "Contact",
+    section: `${contact}`,
 	icon: "envelope-open"
   },
 ]
@@ -46,6 +54,7 @@ const NAV_ELEMENTS = [
 
 
 <nav class="block sm:hidden border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+ <LangButtons />	
   <div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4">
     
     <button data-collapse-toggle="navbar-hamburger" data-toggle="modal" type="button" class="hamburger z-10 flex items-center justify-center p-2 w-15 h-15 text-sm text-gray-300 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-yellow-700 dark:focus:ring-yellow-600" aria-controls="navbar-hamburger" aria-expanded="false">

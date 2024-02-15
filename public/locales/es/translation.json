@@ -49,5 +49,11 @@
         "desc3": "Proyecto sustentable para determinar, y/o diágnosticas, la calidad en el agua.", 
         "sub4": "EpsiWeb | Website Development",
         "desc4": "Servicio de desarrollo web. La mejor experiencia para el usuario."
-     }
+     },
+     "contact": {
+        "title": "Contáctame",
+        "name": "Nombre",
+        "message": "Mensaje",
+        "send": "Enviar"
+    }
 }

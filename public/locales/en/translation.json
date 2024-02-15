@@ -51,5 +51,11 @@
         "desc3": "It is a sustainability project that aims to help in the diagnosis of water quality.", 
         "sub4": "EpsiWeb | Website Development",
         "desc4": "Web development service. The best user experience, on any device and optimized." 
+    },
+    "contact": {
+        "title": "Contact me",
+        "name": "Name",
+        "message": "Message",
+        "send": "Send"
     }
 }

@@ -85,9 +85,13 @@ other={t("othersocials.other")}
 	  <SectionContainer id="contact">
          <SectionTitle>
 			<MailOpenedIcon class="size-7 text-yellow-500"/>
-			Contact me
+			{t("contact.title")}
 		 </SectionTitle> 
-		 <Contact/>
+		 <Contact
+		  name={t("contact.name")}
+		  message={t("contact.message")}
+		  send={t("contact.send")}
+		 />
 	  </SectionContainer>
    
 

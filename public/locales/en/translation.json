@@ -32,6 +32,11 @@
         "p3": ", which I put into practice both, in my work environment and outside of it.",
         "p4": "I have only Free-lancer projects for the moment, but, my mind is open for everything"
     },
+    "skills": {
+        "title" : "My Skills",
+        "p1": "Included others similiars CSS Frameworks.",
+        "p2": "Included the similiars systems of DB management."
+    },
     "experience": {
         "title" : "Work Experience (IT)",
         "date":"Jan 2023 - Jul 2023",

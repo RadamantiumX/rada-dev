@@ -9,7 +9,6 @@ import Skills from "../../components/Skills.astro";
 import Experience from "../../components/Experience.astro";
 import SectionContainer from "../../components/SectionContainer.astro";
 import Projects from "../../components/Projects.astro";
-
 import Contact from "../../components/Contact.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
 import i18next, { t, changeLanguage } from "i18next";
@@ -48,7 +47,11 @@ other={t("othersocials.other")}
 	  />
 	</SectionContainerAbout>	
 	<SectionContainerAbout>
-		<Skills/>
+		<Skills
+		title={t("skills.title")}
+		p1={t("skills.p1")}
+		p2={t("skills.p2")} 
+		/>
 	</SectionContainerAbout>
      
 	<div class="px-4 sm:px-0">

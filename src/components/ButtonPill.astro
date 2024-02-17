@@ -7,6 +7,6 @@ interface Props {
 const { classProps, href } = Astro.props
 
 ---
-<a class=`rounded-full cursor-pointer text-2xl bg-green-700 mt-11 p-3 px-10 ${classProps} hover:bg-yellow-500 hover:scale-110 transition` href={href}>
+<a target="_blank" class=`rounded-full cursor-pointer text-xl bg-green-700 mt-11 py-1 px-7 ${classProps} hover:bg-yellow-500 hover:scale-110 transition` href={href}>
   <slot/>
 </a>

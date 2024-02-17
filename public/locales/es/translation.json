@@ -31,6 +31,11 @@
         "p3": ", ambas puestas en práctica, tanto en mi entorno laboral, como fuera de el.",
         "p4": "Solo poseo experiencia FREE-LANCER, pero no descarto ninguna posibilidad"    
     },
+    "skills": {
+        "title" : "Habilidades",
+        "p1": "Estan incluídos algunos Framewoks de CSS similares.",
+        "p2": "Estan incluídos los similares sistemas para gestión de Base de datos."
+    },
     "experience": {
         "title" : "Experiencia (IT)",
         "date": "Ene 2023 - Jul 2023",

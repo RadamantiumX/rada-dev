@@ -17,7 +17,10 @@ export default defineConfig({
     loacales: ["en", "es"],
     experimental: {
       i18nDomains: true
-    }
+    },
+    routing: {
+      prefixDefaultLocale: false
+  }
   })],
   adapter: vercel()
 });

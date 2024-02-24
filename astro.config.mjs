@@ -7,7 +7,7 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'hybrid',
   integrations: [tailwind(), react(), astroI18next({
     baseLanguage: "en",
       i18next: {

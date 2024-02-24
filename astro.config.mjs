@@ -10,10 +10,14 @@ export default defineConfig({
   output: 'server',
   integrations: [tailwind(), react(), astroI18next({
     baseLanguage: "en",
-      i18next: {
+    i18next: {
         debug: true, // convenient during development to check for missing keys
         supportedLngs: ["en", "es"],
       },
+    loacales: ["en", "es"],
+    experimental: {
+      i18nDomains: true
+    }
   })],
   adapter: vercel()
 });

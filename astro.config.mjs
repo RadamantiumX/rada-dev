@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import astroI18next from "astro-i18next";
 import react from "@astrojs/react";
-
+import vercelServerless from '@astrojs/vercel/serverless';
 import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
@@ -22,5 +22,5 @@ export default defineConfig({
       prefixDefaultLocale: false
   }
   })],
-  adapter: vercel()
+  adapter: vercelServerless()
 });
